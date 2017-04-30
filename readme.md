@@ -100,7 +100,17 @@ This site uses the Google fonts `Roboto` and `Roboto Slab`.  To use these fonts 
 
 #### Body
 
-For the body element, set the margin and padding to 0, box-sizing to border-box, and the font-family to 'Roboto', sans-serif.
+For the body element, set the margin and padding to 0, and the font-family to 'Roboto', sans-serif.
+
+#### Box-Sizing
+
+We'll be using the border-box box-sizing model globally.  To set this, add the following to your css file:
+
+```
+* {
+    box-sizing: border-box;
+}
+```
 
 #### Headings
 

@@ -1,0 +1,83 @@
+/****** Base ******/
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+* {
+  box-sizing: border-box;
+}
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    margin: 1em 0;
+    font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/****** Layout ******/
+.wrap {
+    padding: 2rem;
+}
+
+/****** Header ******/
+.header {
+  background-color: #333333;
+  background-image: url('../img/hero-bg-pizza.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+nav {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+   display: block;
+}
+
+nav a {
+  padding: .5rem;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #871719;
+}
+
+.hero-button {
+  font-size: 1.4rem;
+  font-family: 'Roboto Slab', serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid #FFFFFF;
+  padding: 6px 12px;
+}
+
+.hero-button:hover {
+  border-color: #871719;
+  background-color: #871719;
+}
