@@ -152,7 +152,6 @@ Now we're getting into specifics for the header section.  This section should se
 ```
 
 #### Navigation
-
 * The font inside the navigation should have a font family of `Roboto Slab` with a fallback to `serif`.  The font should be bold, uppercate, and the text should be center aligned.  
 * The `ul` element should be unstyled and have no padding.
 * The li element should be set to display as block.
@@ -188,7 +187,6 @@ nav a:hover {
 ```
 
 #### Hero Button
-
 Finaly let's make a pretty button.  Target the hero-button class and apply the following:
 
 * The font size should be 1.4x the base font size (1.4rem).
@@ -216,3 +214,60 @@ Here is an example of what the css should look like:
 ```
 
 Now we have a styled header section for our site!
+
+## Challenge 2
+
+Let's build out the Welcome and Mail List sections of our page.
+
+### Welcome Section
+
+This one is pretty simple.  Similar to the Header section, you will need a section element with a wrapper inside of it.  Inside the wrapper you should add a h2 with the words "Welcome to Louie's", but "Louie's" should be red (#871719). 
+
+Now add a paragraph below the h2 with the following text:
+
+```
+Enjoy the old-school ambiance, original wooden booths sentimentally etched by our loyal customers, the black and white art deco floors worn by time, turn of the century tin ceilings and faded murals tell tale of a bygone era. Sit back, relax, enjoy the smell of simmering tomatoes and hot pizza, feel the warmth and camaraderie, hear the laughter and conversation of happy diners and you feel like you are home again, somewhere familliar, comfortable, affordable, family centered and “ORIGINAL”.
+```
+
+Make sure that the h2 uses the 'Roboto Slab' font-family with a fallback to serif.  The font size for h2 should be 175% of the base font-size (1.75rem).
+
+### Mail List Section
+
+Similar to the Welcome section, you will need a section element with a wrapper inside of it.  Inside the wrapper you should add a h2 with the words "Join Louie's List today, and get a free slice!". 
+
+Create a new form element with a label of "Email", an input with placeholder text like "jsmith@gmail.com", and a submit button with the text "Sign Up."  Lastly, add a paragraph with the text "We promise not to SPAM you, unless you want it on your pie! Data charges may apply if your still using dial-up or AOL." and make it 80% of the base font size (.8rem).
+
+The lable, input, and button should be block level elements that take 100% of the width of their containing element.  Create classes for the newsletter label, input and button.  Be sure that these classes contain the following CSS properties in addition to being displayed as block level elements, and having 100% width.
+
+#### Label
+
+```
+    margin: 0 0 16px 0;
+```
+
+#### Input
+
+```
+    border: 1px solid #c0af8e;
+    border-radius: 3px;
+    height: 40px;
+    padding: 8px;
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+``` 
+
+#### Button
+
+```
+    background-color: #871719;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-family: 'Roboto Slab', serif;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 40px;
+```
+
+Finally, let's make the "Sign Up" button change to purple (#800080) when the user hovers over it.  We should now have a completed Mail List section that looks great on mobile devices.  
+
