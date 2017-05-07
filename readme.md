@@ -70,6 +70,7 @@ Now we will add a little bit of content to our website, and add a little bit of 
 In index.html, find the section labeled `Header` and paste in the following html:
 ```
 <section class="header">
+    <div class="wrap">
         <img src="img/louies-logo.svg">
         <nav id="main-nav" role="navigation">
             <ul>
@@ -79,10 +80,11 @@ In index.html, find the section labeled `Header` and paste in the following html
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-    <div class="hero-block">
-        <h1>World's Favorite Pizza!</h1>
-        <p>Located on Clay Street, in NuLu, Louie’s Pizza is part of one of Louisville’s most lively neighborhoods. In close proximity to Downtown and near Washington Park, our NuLu pizzeria has a cool atmosphere suited for anyone looking to find a spot to hang out.</p>
-        <a href="#" class="hero-button">View Menu</a>
+        <div class="hero-block">
+            <h1>World's Favorite Pizza!</h1>
+            <p>Located on Clay Street, in NuLu, Louie’s Pizza is part of one of Louisville’s most lively neighborhoods. In close proximity to Downtown and near Washington Park, our NuLu pizzeria has a cool atmosphere suited for anyone looking to find a spot to hang out.</p>
+            <a href="#" class="hero-button">View Menu</a>
+        </div>
     </div>
 </section>
 ```
@@ -90,6 +92,15 @@ In index.html, find the section labeled `Header` and paste in the following html
 Here we have added a section to our website.  This section contains a logo, navigation, and a "Hero Block" with informaiton about our website.  If you open Index.html in a web browser, it won't look like much now since we haven't added any CSS to our site.  Let's style this section to make it match the mobile version of the site as shown in the mobile.pdf file.  
 
 ### Part C - Styling the Header
+
+#### Box Sizing
+For this project, we'll use the border-box box-sizing method.  Add the following to site.css
+
+```
+* {
+    box-sizing: border-box;
+}
+```
 
 #### Fonts
 This site uses the Google fonts `Roboto` and `Roboto Slab`.  To use these fonts on our site, let's add the font stylesheet from Google to the head element inside index.html.
@@ -101,16 +112,6 @@ This site uses the Google fonts `Roboto` and `Roboto Slab`.  To use these fonts 
 #### Body
 
 For the body element, set the margin and padding to 0, and the font-family to 'Roboto', sans-serif.
-
-#### Box-Sizing
-
-We'll be using the border-box box-sizing model globally.  To set this, add the following to your css file:
-
-```
-* {
-    box-sizing: border-box;
-}
-```
 
 #### Headings
 
@@ -152,10 +153,10 @@ Now we're getting into specifics for the header section.  This section should se
 ```
 
 #### Navigation
-* The font inside the navigation should have a font family of `Roboto Slab` with a fallback to `serif`.  The font should be bold, uppercate, and the text should be center aligned.  
+* The font inside the navigation should have a font family of `Roboto Slab` with a fallback to `serif`.  The font should be bold, uppercase, and the text should be center aligned.  
 * The `ul` element should be unstyled and have no padding.
 * The li element should be set to display as block.
-* The a element should have a padding of .5rem and should also be displated as block.
+* The a element should have a padding of .5rem and should also be displayed as block.
 * When the user hovers over an anchor tag, the background color should be set to #871719.
 
 Here is an example of how the nav styling should look:
@@ -269,5 +270,5 @@ The lable, input, and button should be block level elements that take 100% of th
     height: 40px;
 ```
 
-Finally, let's make the "Sign Up" button change to purple (#800080) when the user hovers over it.  We should now have a completed Mail List section that looks great on mobile devices.  
+Finally, let's make the "Sign Up" button change to purple (#800080) when the user hovers over it and set the background of the entire section to yellow (#E8D5B5).  We should now have a completed Mail List section that looks great on mobile devices.  
 
