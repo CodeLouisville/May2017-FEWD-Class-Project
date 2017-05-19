@@ -269,5 +269,5 @@ The lable, input, and button should be block level elements that take 100% of th
     height: 40px;
 ```
 
-Finally, let's make the "Sign Up" button change to purple (#800080) when the user hovers over it.  We should now have a completed Mail List section that looks great on mobile devices.  
+Finally, let's make the "Sign Up" button change to purple (#800080) when the user hovers over it and set the background of the entire section to yellow (#E8D5B5).  We should now have a completed Mail List section that looks great on mobile devices.  
 
