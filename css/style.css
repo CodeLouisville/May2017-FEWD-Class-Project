@@ -24,6 +24,15 @@ h2 {
   font-size: 1.75rem;
 }
 
+h4 {
+    font-size: 1.4rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    margin: 1em 0 .5em 0;
+}
+
 p {
   font-size: 1.2rem;
   line-height: 1.6;
@@ -38,6 +47,10 @@ a {
 
 .red {
   color: #871719;
+}
+
+.text-right {
+  text-align: right;
 }
 
 /****** Layout ******/
@@ -136,4 +149,22 @@ nav a:hover {
 
 .small-txt {
   font-size: .8rem;
+}
+
+/****** Food Menu ******/
+#foodmenu .menu {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.menu-head {
+  text-align: left;
+}
+
+.menu-price {
+    color: #871719;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: right;
 }
