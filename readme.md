@@ -272,3 +272,288 @@ The lable, input, and button should be block level elements that take 100% of th
 
 Finally, let's make the "Sign Up" button change to purple (#800080) when the user hovers over it and set the background of the entire section to yellow (#E8D5B5).  We should now have a completed Mail List section that looks great on mobile devices.  
 
+### Challenge 3
+
+Just like before, add a section with a wrapper element inside the `Food Menu` section of `index.html`. 
+
+#### Intro Content 
+Start by adding the h2 and the paragraph as shown in the `mobile.pdf` file.  
+
+```
+<h2><span class="red">Louie's</span> Menu</h2>
+<p>The “Hallmarks” of Louie’s of Clay St. are the coal fired brick ovens that churn out hundreds of crispy pizza’s daily. It’s a different world than it was in 1929, but we are still making the same traditional coal fired pizza in the oven that started it all back on Main Street.</p>
+```
+
+#### Setting Up Our Data
+Create a directory named `js` and create a new file named `app.js`.  In `app.js` let's create a variable named `menu` and set it equal to the following JavaScript object:
+
+```
+{
+  "Food": [
+    {
+      "name": "Salads",
+      "items": [
+        {
+          "name": "Louie's Chef Salad",
+          "price": 7.5
+        },
+        {
+          "name": "Caesar Salad",
+          "price": 9
+        },
+        {
+          "name": "Garden Salad",
+          "price": 6.25
+        },
+        {
+          "name": "Side Salad",
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "name": "Appetizers",
+      "items": [
+        {
+          "name": "Mozzarella Cheese Sticks",
+          "price": 4.25
+        },
+        {
+          "name": "Garlic Bread with Cheese",
+          "price": 5
+        },
+        {
+          "name": "Breadsticks (6)",
+          "price": 4.25
+        },
+        {
+          "name": "Family Breadsticks (12)",
+          "price": 6.5
+        },
+        {
+          "name": "Garlic Knots",
+          "price": 5
+        },
+        {
+          "name": "Jalapeno Poppers",
+          "price": 4
+        }
+      ]
+    },
+    {
+      "name": "Sandwiches",
+      "items": [
+        {
+          "name": "Steak Hoagie",
+          "price": 4.35
+        },
+        {
+          "name": "Stromboli Sub",
+          "price": 5
+        },
+        {
+          "name": "Meatball Sub",
+          "price": 4.25
+        },
+        {
+          "name": "Roast Beef Sub",
+          "price": 6.5
+        },
+        {
+          "name": "Barbeque Chicken Sub",
+          "price": 5
+        },
+        {
+          "name": "Jalepeño Poppers",
+          "price": 4
+        }
+      ]
+    },
+    {
+      "name": "Specialty Pizzas",
+      "items": [
+        {
+          "name": "Bacon Cheddar Ham",
+          "price": 12.75
+        },
+        {
+          "name": "Bacon Cheeseburger",
+          "price": 11.5
+        },
+        {
+          "name": "Taco Pizza",
+          "price": 12
+        },
+        {
+          "name": "Chicken Fajita",
+          "price": 11.25
+        }
+      ]
+    },
+    {
+      "name": "Classic Pizzas",
+      "items": [
+        {
+          "name": "Pepperoni",
+          "price": 9
+        },
+        {
+          "name": "Cheese",
+          "price": 8
+        },
+        {
+          "name": "Sausage",
+          "price": 9
+        },
+        {
+          "name": "Meat Lover's",
+          "price": 12
+        },
+        {
+          "name": "Supreme",
+          "price": 12.75
+        }
+      ]
+    }
+  ],
+  "Beverages": [
+    {
+      "name": "Soft Drinks",
+      "items": [
+        {
+          "name": "Pepsi",
+          "price": 2
+        },
+        {
+          "name": "Diet Pepsi",
+          "price": 2
+        },
+        {
+          "name": "Dr. Pepper",
+          "price": 2
+        },
+        {
+          "name": "Mountain Dew",
+          "price": 2
+        }
+      ]
+    },
+    {
+      "name": "Wines",
+      "items": [
+        {
+          "name": "Sangiovese",
+          "price": 8.75
+        },
+        {
+          "name": "Pinot Noir",
+          "price": 9
+        },
+        {
+          "name": "Syrah/Shiraz",
+          "price": 10
+        },
+        {
+          "name": "Merlot",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "name": "Beers",
+      "items": [
+        {
+          "name": "Bud Light",
+          "price": 3
+        },
+        {
+          "name": "Blue Moon",
+          "price": 3
+        },
+        {
+          "name": "Miller Lite",
+          "price": 3
+        },
+        {
+          "name": "Pabst Blue Ribbon",
+          "price": 3
+        },
+        {
+          "name": "Guinness",
+          "price": 3
+        },
+        {
+          "name": "Good Morning",
+          "price": 3
+        }
+      ]
+    }
+  ]
+}
+
+```
+
+#### Looping Through Arrays
+
+Below we have an example of what one menu category should look like.  There is a table head with an h4 for the category, which comes from the `name` key in each category object.  Inside each category object, there is an array of food or beverage items.  Each of these items should be a row in your table with two cells, one displaying the item name, and one displaying the item price.  Please note there are two arrays in the object, one for Food and one for Beverages.  Start by displaying Food first.
+
+Using loops and string contatination, build the table for each category and then write it to the inside of the wrapper element inside the food menu section of `index.html`
+
+```
+<table class="menu">
+    <thead>
+        <tr>
+            <th colspan="2"><h4 class="menu-head red">Salads</h4></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Louie's Chef Salad</td>
+            <td class="menu-price text-right">$7.50</td>
+        </tr>
+        <tr>
+            <td>Caesar Salad</td>
+            <td class="menu-price text-right">$9.00</td>
+        </tr>
+        <tr>
+            <td>Garden Salad</td>
+            <td class="menu-price text-right">$6.25</td>
+        </tr>
+        <tr>
+            <td>Side Salad</td>
+            <td class="menu-price text-right">$3.50</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+#### Styling
+Apply styling to the menu classes to match the style in the `mobile.pdf` file. Below are some example styles.  
+
+```
+h4 {
+    font-size: 1.4rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    margin: 1em 0 .5em 0;
+}
+
+#foodmenu .menu {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.menu-head {
+  text-align: left;
+}
+
+.menu-price {
+    color: #871719;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: right;
+}
+``` 
