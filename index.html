@@ -52,7 +52,8 @@
             <form action="/#my-handling-form-page" method="post">
                 <label class="nwsltr-label">Email</label>
                 <input class="nwsltr-input" type="email" placeholder="jsmith@gmail.com" id="email-field">
-                <button class="nwsltr-btn" type="submit" >Sign Up</button>
+                <p class="validation-message" id="email-validation-message">Must be a valid email address.</p>
+                <button class="nwsltr-btn" id="email-submit" type="submit" >Sign Up</button>
             </form>
 
             <p class="small-txt">We promise not to SPAM you, unless you want it on your pie! Data charges may apply if your still using dial-up or AOL.</p>
@@ -85,6 +86,10 @@
 
 
     <!-- Insert JavaScript Here -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <script src="js/app.js" type="text/javascript"></script>
 </body>
 </html>

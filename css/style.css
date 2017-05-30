@@ -139,6 +139,10 @@ nav a:hover {
     height: 40px;
 }
 
+.nwsltr-btn:disabled {
+  opacity: .5;
+}
+
 .nwsltr-btn:hover {
   background-color: #800080;
 }
@@ -147,8 +151,14 @@ nav a:hover {
   background-color: #E8D5B5;
 }
 
-.small-txt {
+.small-txt, .validation-message {
   font-size: .8rem;
+}
+
+.validation-message {
+  color: #ff0000;
+  display: none;
+  margin: .5rem 0;
 }
 
 /****** Food Menu ******/
