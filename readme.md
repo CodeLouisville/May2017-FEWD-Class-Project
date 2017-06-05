@@ -587,3 +587,61 @@ function isValidEmailAddress(emailAddress) {
 #### Button Click
 
 Using jQuery, show an alert when the newsletter button is clicked that says "Server unavaliable, try again later!".  
+
+### Challenge 5
+
+In software development, it's not unusual to want to contribute or make changes to an existing git repository.  With Git, it's easy to make a copy of a repository and keep your own commit history without affecting the original repo.  Let's fork the FEWD Class Project repo, clone it to our local machine, make a change, and then push it back to our fork of the repo.  
+
+1.) First go to https://github.com/CodeLouisville/May2017-FEWD-Class-Project (or the latest location of the repo) and click on the **Fork** button at the top right corner of the repo page.  Notice that the username in the url will change from https://github.com/`CodeLouisville` to https://github.com/`{myUsername}`.
+2.) Click on the green **Clone or Download** button and copy the git url.  
+3.) Open your console and `cd` into the directory where you would like the files to be cloned to.  
+4.) In the console, type `git clone {theGitUrl}`.  This will make a local clone of your github repo.
+5.) `cd` into the newly created folder.
+6.) Check the status of your git repo by running `git status`.
+
+#### Make a change
+
+Now let's make a change to the project which we will later commit to our local repo, and finally push to our remote repo on github.  Let's add a footer to our website by adding the following markup to the **Footer** section of our site.
+
+```
+<footer>
+    <div class="wrap">
+        <p>© Copyright 2016 Louie’s Pizza</p>s
+        <p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+        </p>
+    </div>
+</footer>
+```
+
+Then add these styles to **style.css**.
+
+```
+footer {
+    background-color: #333333;
+    color: #F2F2F2;
+}
+```
+
+#### Commit and Push
+
+Now that we've made our changes, it's time to commit them and then push them back to our github repo.  
+
+1.) Go back to your console and run `git status`.  You'll notice that you have two files that are listed as **modified**.  
+2.) Before we can commit these changes, we need to stage the files that we want to commit.  You can do this by running `git add .` to stage all files.  Alternatively, you can stage individual files via `git add {myFileName}`.
+3.) Run `git status` again to make sure your two files are staged. 
+4.) Let's commit these changes by running `git commit -m "My awesome commit message goes here"` replacing the commit message with your own.  
+5.) Now that you've committed your changes, `git status` should reveal that your local branch is ahead of the remote branch.  Let's catch up the remote branch.  
+6.) Run `git push origin master` to push your latest commits back to the github repo.  
+7.) Run `git status` to confirm that your remote branch is now up-to-date with your local one.  
+
+#### Adding remotes
+
+Your local repo can track multiple remote repos.  This can be useful when you want to update your local repo with changes that were committed to the original repo you forked from.  
+
+1.) Back on github, below the name of your repo is a link back to the repo it was forked form.  Click the link and copy the git url for the original repo.
+2.) In your console, run `git remote add codelouisville {url to repo goes here}` to add the remote repo.  
+3.) Now run `git remote -v` to list all the remote repos for your local repo.
+4.) You can change the remote that your local branch is tracking by running `git branch -u codelouisville\master`.
+5.) Now when you run `git status` you will be checking if your local branch is up-to-date with the code louisville remote repo.
+6.) You can switch back to your fork on github by running `git branch -u origin/master`.
