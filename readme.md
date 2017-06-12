@@ -17,7 +17,7 @@ In this challenge, we will scaffold our web project by creating a bare-bones htm
     <title>Louie's Pizza</title>
 
     <!-- Insert Style Sheet Here-->
-    
+
     <!-- Insert Google Fonts Here -->
 
 </head>
@@ -116,7 +116,7 @@ For the body element, set the margin and padding to 0, and the font-family to 'R
 #### Headings
 
 H1 headings should:
-* Be upper case 
+* Be upper case
 * Have a font-size that is 2.5x larger than the base font size (1.2rem)
 * Have a margin of 2rem for the top and bottom
 * Have a font family of 'Roboto Slab' with a fallback to serif.  
@@ -222,7 +222,7 @@ Let's build out the Welcome and Mail List sections of our page.
 
 ### Welcome Section
 
-This one is pretty simple.  Similar to the Header section, you will need a section element with a wrapper inside of it.  Inside the wrapper you should add a h2 with the words "Welcome to Louie's", but "Louie's" should be red (#871719). 
+This one is pretty simple.  Similar to the Header section, you will need a section element with a wrapper inside of it.  Inside the wrapper you should add a h2 with the words "Welcome to Louie's", but "Louie's" should be red (#871719).
 
 Now add a paragraph below the h2 with the following text:
 
@@ -234,7 +234,7 @@ Make sure that the h2 uses the 'Roboto Slab' font-family with a fallback to seri
 
 ### Mail List Section
 
-Similar to the Welcome section, you will need a section element with a wrapper inside of it.  Inside the wrapper you should add a h2 with the words "Join Louie's List today, and get a free slice!". 
+Similar to the Welcome section, you will need a section element with a wrapper inside of it.  Inside the wrapper you should add a h2 with the words "Join Louie's List today, and get a free slice!".
 
 Create a new form element with a label of "Email", an input with placeholder text like "jsmith@gmail.com", and a submit button with the text "Sign Up."  Lastly, add a paragraph with the text "We promise not to SPAM you, unless you want it on your pie! Data charges may apply if your still using dial-up or AOL." and make it 80% of the base font size (.8rem).
 
@@ -255,7 +255,7 @@ The lable, input, and button should be block level elements that take 100% of th
     padding: 8px;
     margin: 0 0 10px 0;
     font-size: 1rem;
-``` 
+```
 
 #### Button
 
@@ -274,9 +274,9 @@ Finally, let's make the "Sign Up" button change to purple (#800080) when the use
 
 ### Challenge 3
 
-Just like before, add a section with a wrapper element inside the `Food Menu` section of `index.html`. 
+Just like before, add a section with a wrapper element inside the `Food Menu` section of `index.html`.
 
-#### Intro Content 
+#### Intro Content
 Start by adding the h2 and the paragraph as shown in the `mobile.pdf` file.  
 
 ```
@@ -556,7 +556,7 @@ h4 {
     font-weight: 700;
     text-align: right;
 }
-``` 
+```
 
 ### Challenge 4
 
@@ -629,7 +629,7 @@ Now that we've made our changes, it's time to commit them and then push them bac
 
 1.) Go back to your console and run `git status`.  You'll notice that you have two files that are listed as **modified**.  
 2.) Before we can commit these changes, we need to stage the files that we want to commit.  You can do this by running `git add .` to stage all files.  Alternatively, you can stage individual files via `git add {myFileName}`.
-3.) Run `git status` again to make sure your two files are staged. 
+3.) Run `git status` again to make sure your two files are staged.
 4.) Let's commit these changes by running `git commit -m "My awesome commit message goes here"` replacing the commit message with your own.  
 5.) Now that you've committed your changes, `git status` should reveal that your local branch is ahead of the remote branch.  Let's catch up the remote branch.  
 6.) Run `git push origin master` to push your latest commits back to the github repo.  
