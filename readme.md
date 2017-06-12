@@ -606,7 +606,7 @@ Now let's make a change to the project which we will later commit to our local r
 ```
 <footer>
     <div class="wrap">
-        <p>© Copyright 2016 Louie’s Pizza</p>s
+        <p>© Copyright 2016 Louie’s Pizza</p>
         <p>
             <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
         </p>
