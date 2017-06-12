@@ -178,3 +178,9 @@ nav a:hover {
     font-weight: 700;
     text-align: right;
 }
+
+/****** Footer ******/
+footer {
+    background-color: #333333;
+    color: #F2F2F2;
+}
