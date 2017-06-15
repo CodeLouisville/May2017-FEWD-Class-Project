@@ -645,3 +645,47 @@ Your local repo can track multiple remote repos.  This can be useful when you wa
 4.) You can change the remote that your local branch is tracking by running `git branch -u codelouisville\master`.
 5.) Now when you run `git status` you will be checking if your local branch is up-to-date with the code louisville remote repo.
 6.) You can switch back to your fork on github by running `git branch -u origin/master`.
+
+### Challenge 6
+
+#### Responsive Design
+Up until now we've been building our site mobile-first, meaning all our styles have been targeting small screen devices.  Let's add some media queries and layout classes that will help us create a two column layout which we'll be able to use throughout the site.  
+
+#### Simple Grid
+
+Let's create a simple grid system which will allow us to create a column that spans half of its containing element, or the full width of its container.  
+
+1.) Create two new classes, `.span_1_of_2` and `.span_2_of_2`
+2.) Give both span classes a width of 100% and a top/bottom padding of 10px, and a left/right padding of 15px.  
+3.) Write a new media query which only applies to screens that are 992px wide or larger.  
+4.) In the media query, make the `.span_1_of_2` class be 50% width rather than 100% width.
+
+#### Fixing up the header section
+
+Let's make the header section repsonsive by making the logo and the menu be on two seperate columns using our new span classes. Now inside the media query, change display of the navigation menu items to `inline-block`.
+
+We now see that we've ran into a problem.  The "World's Favorite Pizza!" heading has wrapped to the right side of the logo, and the padding on the left and right side of our columns is cause the content to not line up with the rest of the content on the site.  Let's fix this by adding a `.row` class which will wrap the `.span_x_of_2` classes.  The `.row` class should be display: block, and should have a `-15px` margin on the left and the right side to compensate for the padding introduced by the span columns.  
+
+We'll need to apply a clearfix to the `.row` class so that elements will no longer float to the right of our row.  
+
+```
+.row:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+```
+
+Lastly, give the navigation a top margin of 5rem to align it better with the left side menu. 
+
+#### Adding a gutter
+
+Our site is looking better on desktop now, but the content is still spanning the entire page, which makes it difficult to read when you're on a large display.  In your media query, set the width of the `.wrap` class to 970px to limit the width of the wrapper.  Set the left and right margin to auto so that the wrapper will be centered on the page.
+
+#### Finish columnal layout
+
+Create your own classes to split the input/button in the newsletter form 70/30.  Use exisiting classes to give the footer a desktop layout.  
+
+#### Flex your boxes
+
+Make the `#foodmenu` element a flex container.  Be sure that the flex container items are allowed to wrap, and limit the width of each item to 45% for desktop.  The flex container items should have a `space-between` justification.  
