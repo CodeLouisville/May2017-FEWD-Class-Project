@@ -162,6 +162,12 @@ nav a:hover {
 }
 
 /****** Food Menu ******/
+#foodmenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 #foodmenu .menu {
   width: 100%;
   font-size: 1.2rem;
@@ -183,4 +189,61 @@ nav a:hover {
 footer {
     background-color: #333333;
     color: #F2F2F2;
+}
+
+/*****Layout******/
+
+.span_1_of_2, .span_2_of_2, .span_3_of_10, .span_7_of_10 {
+  width: 100%;
+  float: left;
+  padding: 10px 15px;
+}
+
+.row {
+  margin: 0 -15px;
+  display: block;
+}
+
+.row:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+/*****Media Queries******/
+
+@media(min-width: 992px) {
+  #foodmenu .menu {
+    width: 45%;
+  }
+
+  .span_1_of_2 {
+    width: 50%;
+  }
+
+  .span_3_of_10 {
+    width: 30%;
+  }
+
+  .span_7_of_10 {
+    width: 70%;
+  }
+
+  nav {
+    margin-top: 5rem;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  .wrap {
+    width: 970px;
+    margin: 0 auto;
+  }
+
+  #privacypolicylinks {
+    float: right;
+  }
+
 }
