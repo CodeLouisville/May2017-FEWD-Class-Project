@@ -17,15 +17,19 @@
     <!-- Header -->
         <section class="header">
             <div class="wrap">
-                <img src="img/louies-logo.svg">
-                <nav id="main-nav" role="navigation">
-                    <ul>
-                        <li><a href="#">Welcome</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
+                <div class="row">
+                    <div class="span_1_of_2"><img src="img/louies-logo.svg"></div>
+                    <div class="span_1_of_2">
+                        <nav id="main-nav" role="navigation">
+                            <ul>
+                                <li><a href="#">Welcome</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Menu</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
                 <div class="hero-block">
                     <h1>World's Favorite Pizza!</h1>
                     <p>Located on Clay Street, in NuLu, Louie’s Pizza is part of one of Louisville’s most lively neighborhoods. In close proximity to Downtown and near Washington Park, our NuLu pizzeria has a cool atmosphere suited for anyone looking to find a spot to hang out.</p>
@@ -51,9 +55,15 @@
             
             <form action="/#my-handling-form-page" method="post">
                 <label class="nwsltr-label">Email</label>
-                <input class="nwsltr-input" type="email" placeholder="jsmith@gmail.com" id="email-field">
-                <p class="validation-message" id="email-validation-message">Must be a valid email address.</p>
-                <button class="nwsltr-btn" id="email-submit" type="submit" >Sign Up</button>
+                <div class="row">
+                    <div class="span_7_of_10">
+                        <input class="nwsltr-input" type="email" placeholder="jsmith@gmail.com" id="email-field">
+                        <p class="validation-message" id="email-validation-message">Must be a valid email address.</p>
+                    </div>
+                    <div class="span_3_of_10">
+                        <button class="nwsltr-btn" id="email-submit" type="submit" >Sign Up</button>
+                    </div>
+                </div>
             </form>
 
             <p class="small-txt">We promise not to SPAM you, unless you want it on your pie! Data charges may apply if your still using dial-up or AOL.</p>
@@ -83,10 +93,16 @@
     <!-- Footer -->
     <footer>
         <div class="wrap">
-            <p>© Copyright 2016 Louie’s Pizza</p>
-            <p>
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
-            </p>
+            <div class="row">
+            <div class="span_1_of_2">
+                <p>© Copyright 2016 Louie’s Pizza</p>
+            </div>
+            <div class="span_1_of_2">
+                <p id="privacypolicylinks">
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+                </p>
+            </div>
+            </div>
         </div>
     </footer>
     <!-- /Footer -->
