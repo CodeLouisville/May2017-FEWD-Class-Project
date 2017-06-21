@@ -689,3 +689,26 @@ Create your own classes to split the input/button in the newsletter form 70/30. 
 #### Flex your boxes
 
 Make the `#foodmenu` element a flex container.  Be sure that the flex container items are allowed to wrap, and limit the width of each item to 45% for desktop.  The flex container items should have a `space-between` justification.  
+
+
+### Challenge 7
+
+#### Now with 100% more AJAX
+
+Louie's restaurants are expanding to new regions, but each region may have a different menu.  Instead of hard coding the food menu in our JavaScript, let's fetch the menu from a server using AJAX.  
+
+1.) Remove the hard coded menu object from `app.js`.
+2.) Refactor the code we wrote to generate the html for the food menu into a render function that accepts the menu data as a parameter.  
+3.) Use jQuery's get or ajax method to make a get request to the following url to fetch the food menu.  Call your newly created render function when the AJAX request is complete.  
+
+```
+https://cdn.rawgit.com/Bumbolio/567f8ed0ac99703fbbe24a64638fcc81/raw/9a0930b07e6b746a76e058ac956e5528aedcfacf/menu.json
+```
+
+Your menu should look the same, but now the menu data is coming from a remote server. 
+
+#### Bonus
+
+Write additional code to display a friendly message on the page when the AJAX request fails.  
+
+ 
