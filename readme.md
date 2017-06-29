@@ -689,3 +689,55 @@ Create your own classes to split the input/button in the newsletter form 70/30. 
 #### Flex your boxes
 
 Make the `#foodmenu` element a flex container.  Be sure that the flex container items are allowed to wrap, and limit the width of each item to 45% for desktop.  The flex container items should have a `space-between` justification.  
+
+
+### Challenge 7
+
+#### Now with 100% more AJAX
+
+Louie's restaurants are expanding to new regions, but each region may have a different menu.  Instead of hard coding the food menu in our JavaScript, let's fetch the menu from a server using AJAX.  
+
+1.) Remove the hard coded menu object from `app.js`.
+2.) Refactor the code we wrote to generate the html for the food menu into a render function that accepts the menu data as a parameter.  
+3.) Use jQuery's get or ajax method to make a get request to the following url to fetch the food menu.  Call your newly created render function when the AJAX request is complete.  
+
+```
+https://cdn.rawgit.com/Bumbolio/567f8ed0ac99703fbbe24a64638fcc81/raw/9a0930b07e6b746a76e058ac956e5528aedcfacf/menu.json
+```
+
+Your menu should look the same, but now the menu data is coming from a remote server. 
+
+#### Bonus
+
+Write additional code to display a friendly message on the page when the AJAX request fails.  
+
+ ### Challenge 8
+
+ #### The finishing touches
+
+ Let's finish our site by adding the history and map sections.
+
+ #### Part 1 - History
+
+ 1.) Using our custom grid system, create two columns and place the following content inside the left column.
+
+ ```
+                         <h2>Louie's History</h2>
+                        <p>Louie’s was founded in 1929 by Italian immigrant Louie Bianchi. Louie’s was Originally established on Main Street, in the Heart of Louisville. After losing his lease on Main Street, Louie Bianchi dismantled his original coal fired brick oven and moved it to 271 Clay Street where he continued to run and grow his business and refine his pizza recipe to perfection.</p>
+                        <p>Bianchi ran his business until 1954 when he sold the pizzeria to the Romano Brothers. Augustine Romano bought the business from his brothers and he continued to own and operate Louie’s pizzeria until he passed away in 1984, passing his legacy on.</p>
+```
+
+2.) Place the `louie-photo.png` image on the right column.  
+3.) Add some simple styling to the history section to ensure that the font color is white, and that the image is centered within the right column.  
+4.) Set the background of the History section to the image called `louies-bg-making-red.jpg`.  For more info, see this article from CSS-Tricks (https://css-tricks.com/perfect-full-page-background-image/).
+5.) Check that the content flows properly on mobile and desktop.
+
+#### Part 2 - Google Maps
+
+Let's embed Google Maps into our site and set a pin on the map.  
+
+1.) Find the Map section of the site in index.html.
+2.) Add a new section div and give it an id of `map`.  Set the minimum height of the `map` id to 50vh.
+2.) Follow the instructions on Google's website to embed google maps on your site. (https://developers.google.com/maps/documentation/javascript/adding-a-google-map)
+
+You can choose to place your pin anywhere on the map. Keep in mind that you will need to creat your own Google Maps API Key in order to use the Google Maps SDK. 
