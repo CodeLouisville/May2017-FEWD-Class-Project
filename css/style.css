@@ -161,6 +161,21 @@ nav a:hover {
   margin: .5rem 0;
 }
 
+/****** History ******/
+#history {
+    background: #871719;
+    background-image: url(../img/louies-bg-making-red.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #F2F2F2;
+}
+
+#history img {
+  margin: 0 auto;
+  display: block;
+}
+
 /****** Food Menu ******/
 #foodmenu {
   display: flex;
@@ -183,6 +198,11 @@ nav a:hover {
     text-transform: uppercase;
     font-weight: 700;
     text-align: right;
+}
+
+/*****Map******/
+#map {
+  min-height: 50vh;
 }
 
 /*****Footer******/
